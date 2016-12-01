@@ -10,11 +10,11 @@ En la actualidad incorpora las siguientes utilidades:
 
 ## Autores
 
-+ Ricard Bernal @ricardbernal81
-+ Maria Donet @MriDnet
-+ Pablo Enrique @_pabloenrique5
-+ JuanMa García @juanmgar
-+ Gonzalo Gil @olaznog59
++ Ricard Bernal [@ricardbernal81](http://twithttp://twitter.com/er.com/ricardbernal81)
++ Maria Donet [@MriDnet](http://twitter.com/MriDnet)
++ Pablo Enrique [@_pabloenrique5](http://twitter.com/_pabloenrique5)
++ JuanMa García [@juanmgar](http://twitter.com/juanmgar)
++ Gonzalo Gil [@olaznog59](http://twitter.com/olaznog59)
 
 USTGeoloc es el resultado del trabajo final del itinerario de desarrollo de aplicaciones móviles de [Talentum](http://empleodigitalformacion.fundaciontelefonica.com "Web de Talentum Empleo"), proyecto de Fundación Telefónica, junto con la colaboración de [UST Global.](http://www.ust-global.es/ "Web de UST Global España").
 
