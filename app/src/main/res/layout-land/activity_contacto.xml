@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="#FFFFFF">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+
+        android:minHeight="?attr/actionBarSize"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!--  <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="GLOBAL UST"
+                android:textSize="35dp"
+                android:background="#000ac2"
+                android:layout_weight="3"
+                android:textColor="#cc0509"
+                android:textStyle="normal|bold" />
+
+        -->
+
+
+    <Button
+        android:id="@+id/buttonEnviarContacto"
+        style="?android:textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+
+        android:text="conectar"
+        android:textSize="25dp"
+        android:textAlignment="center"
+        android:background="#f9e40b12"
+        android:textColor="#ffffff"
+        android:onClick="buttonEnviarContacto"
+
+
+        tools:layout_editor_absoluteY="5dp"
+        tools:layout_editor_absoluteX="86dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginStart="25dp" />
+
+    <QuickContactBadge
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srcCompat="@color/cast_expanded_controller_seek_bar_progress_background_tint_color"
+        android:id="@+id/quickContactBadge"
+
+        tools:layout_editor_absoluteY="78dp"
+        tools:layout_editor_absoluteX="83dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp" />
+
+
+</LinearLayout>

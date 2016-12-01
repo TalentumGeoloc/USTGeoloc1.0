@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".MapsActivity"
+    >
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+
+        android:minHeight="?attr/actionBarSize"
+        >
+
+
+       <!--<item android:id="@+id/action_settings" android:title="@string/action_settings"
+            android:orderInCategory="100" android:showAsAction="never"
+        -->
+
+    </include>
+
+        <!--  <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="GLOBAL UST"
+                android:textSize="35dp"
+                android:background="#000ac2"
+                android:layout_weight="3"
+                android:textColor="#cc0509"
+                android:textStyle="normal|bold" />
+
+        -->
+
+
+
+   <include layout="@layout/activity_maps" />
+
+</LinearLayout>

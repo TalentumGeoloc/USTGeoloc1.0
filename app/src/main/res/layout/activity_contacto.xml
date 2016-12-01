@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_contacto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.olaznog59.proyectoustvista.ContactoActivity"
+    android:background="#FFFFFF">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+
+        android:minHeight="?attr/actionBarSize"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+
+
+        </include>
+
+
+    <Button
+        android:id="@+id/buttonEnviarContacto"
+        style="?android:textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:text="conectar"
+        android:textSize="25dp"
+        android:textAlignment="center"
+        android:background="#f9e40b12"
+        android:textColor="#ffffff"
+        android:onClick="buttonEnviarContacto"/>
+
+    <QuickContactBadge
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srcCompat="@color/cast_expanded_controller_seek_bar_progress_background_tint_color"
+        android:id="@+id/quickContactBadge"
+        android:padding="10dp" />
+
+</LinearLayout>

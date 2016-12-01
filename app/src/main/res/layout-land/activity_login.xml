@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+
+        android:minHeight="?attr/actionBarSize"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:text="Iniciar sesión"
+        android:textSize="30dp"
+        android:layout_width="183dp"
+        android:layout_height="40dp"
+        android:id="@+id/textView4"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView3"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="29dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:orientation="vertical"
+        android:id="@+id/scrollView3"
+        android:background="#312f2f"
+
+        android:padding="15dp"
+
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_height="wrap_content"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MOVIL:"
+            android:textColor="@color/cast_expanded_controller_text_color"
+            android:textStyle="normal|bold"
+            android:textSize="20dp"
+            android:fontFamily="arial bold"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp" />
+
+        <EditText
+            android:id="@+id/movil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+
+            android:textSize="20dp"
+            android:textColor="#000000"
+            android:inputType="phone"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp" />
+
+
+        <Button
+            android:id="@+id/buttonEnviarNumero"
+            style="?android:textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+
+            android:text="conectar"
+            android:textSize="25dp"
+            android:textAlignment="center"
+            android:background="#f9e40b12"
+            android:textColor="#ffffff"
+            android:onClick="buttonEnviarNumero"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp" />
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

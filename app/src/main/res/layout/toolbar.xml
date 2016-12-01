@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- El toolbar actuara como AppBar de la actividad -->
+<!--android:minHeight: alto estandar de una action bar-->
+
+<!--android:elevation: Esta propiedad define la elevación del componente, -->
+<!--lo que determina la sombra que proyectará sobre el elemento inferior.-->
+
+<!-- android:theme: Tema que usara el toolbar y sus hijos -->
+<!-- android:popupTheme: Tema que usara el menu desplegable -->
+<android.support.v7.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="4dp"
+    android:minHeight="?attr/actionBarSize"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+
+    android:background="#051054">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="0dp" >
+
+
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="262dp"
+            android:layout_height="68dp"
+            app:srcCompat="@drawable/ustlogo"
+
+            android:cropToPadding="false"
+             />
+    </LinearLayout>
+</android.support.v7.widget.Toolbar>
