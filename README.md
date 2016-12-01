@@ -21,6 +21,6 @@ USTGeoloc es el resultado del trabajo final del itinerario de desarrollo de apli
 
 
 
-![alt text](https://github.com/TalentumGeoloc/USTGeoloc/blob/master/logo%20UST%20pequeno.png "Logo UST")
-![alt text](https://github.com/TalentumGeoloc/USTGeoloc/blob/master/talentum_logo.png "Logo Talentum")
+![alt text](https://github.com/TalentumGeoloc/USTGeoloc1.0/blob/master/logo%20UST%20pequeno.png "Logo UST")
+![alt text](https://github.com/TalentumGeoloc/USTGeoloc1.0/blob/master/logo_talentum.png "Logo Talentum")
 
