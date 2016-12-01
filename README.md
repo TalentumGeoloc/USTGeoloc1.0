@@ -9,6 +9,7 @@ En la actualidad incorpora las siguientes utilidades:
 * Comparación de la agenda de contactos de tu dispositivo con otros usuarios de la app.
 * Llamada a contactos posicionados en el mapa.
 * Elección de la ruta más cercana hasta el contacto elegido. 
+* Envio en segundo plano de tu ubicación al servidor. 
 * Autentificación por clave única.
 * Persistencia de los datos en BBDD SQLite.
 
