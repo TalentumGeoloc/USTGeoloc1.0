@@ -6,11 +6,16 @@ Esta app para Android es una extensión, aunque independiente y funcional, de un
 ## Funciones
 En la actualidad incorpora las siguientes utilidades: 
 * Geolocalización del usuario centrado en el mapa.
+* Comparación de la agenda de contactos de tu dispositivo con otros usuarios de la app.
 * Llamada a contactos posicionados en el mapa.
+* Elección de la ruta más cercana hasta el contacto elegido. 
+* Autentificación por clave única.
+* Persistencia de los datos en BBDD SQLite.
+
 
 ## Autores
 
-+ Ricard Bernal [@ricardbernal81](http://twithttp://twitter.com/er.com/ricardbernal81)
++ Ricard Bernal [@ricardbernal81](http://twitter.com/ricardbernal81)
 + Maria Donet [@MriDnet](http://twitter.com/MriDnet)
 + Pablo Enrique [@_pabloenrique5](http://twitter.com/_pabloenrique5)
 + JuanMa García [@juanmgar](http://twitter.com/juanmgar)
