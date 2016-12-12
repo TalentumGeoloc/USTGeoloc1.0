@@ -18,6 +18,7 @@ import java.util.ArrayList;
 
 /*Esta es la clase que guarda los contactos, los crea y los borra*/
 public class DaoContactos {
+    public static final String TAG = "DaoContactos";
 
     private DataBaseHelper db = null;
     private SQLiteDatabase sql = null;
@@ -37,37 +38,51 @@ public class DaoContactos {
 
     public void crearContacto(Usuario usuario){
 
-        ContentValues contentValues = new ContentValues();
-        contentValues.put("nombre", usuario.getNombre());
-        contentValues.put("telefono", usuario.getPhone());
-        contentValues.put("latitud", usuario.getLat());
-        contentValues.put("longitud", usuario.getLon());
+        boolean existe = buscarUsuario(usuario);
+        if (!existe){
+            //si no existe se crea el nuevo usuario en la base de datos
+            ContentValues contentValues = new ContentValues();
+            contentValues.put("nombre", usuario.getNombre());
+            contentValues.put("telefono", usuario.getPhone());
+            contentValues.put("latitud", usuario.getLat());
+            contentValues.put("longitud", usuario.getLon());
 
-        sql.insert(DataBaseHelper.TABLA,null,contentValues);
-    }
-
-
-    public void nuevoContacto(Contacto contacto){
-
-        ContentValues contentValues = new ContentValues();
-        contentValues.put("nombre",contacto.getNombre());
-        contentValues.put("telefono",contacto.getTelefono());
-        contentValues.put("latitud",contacto.getLatitud());
-        contentValues.put("longitud",contacto.getLongitud());
-
-        sql.insert(DataBaseHelper.TABLA,null,contentValues);
-    }
-    public void insertarContactosCompletos(RespuestaServidor arrayContactos) {
-
-        ArrayList<Usuario> arrayList = arrayContactos.getCoordinates();
-
-        for (Usuario usuario : arrayList) {
-
-            crearContacto(usuario);
+            sql.insert(DataBaseHelper.TABLA,null,contentValues);
+        } else {
+            //si exite, se actualizan los valores de latitud y longitud
+            ContentValues contentValues = new ContentValues();
+            contentValues.put("latitud",usuario.getLat());
+            contentValues.put("longitud",usuario.getLon());
+            sql.update(DataBaseHelper.TABLA,//tabla a modificar
+                    contentValues,//campos a modificar
+                    "telefono="+usuario.getPhone(),//dónde modificar
+                    null);
         }
+
+
+
     }
 
 
+
+    public boolean buscarUsuario (Usuario usuario){
+        boolean existe = false;
+        //Primero comprobamos si el usuario existe en bbdd
+        String [] columnasABuscar = {"nombre","telefono"};
+
+        Log.d(TAG, "Vamos a si el usuario existe en la base de datos");
+        Cursor c = sql.query(
+                DataBaseHelper.TABLA, //tabla donde se va a buscar
+                columnasABuscar, //columnas a buscar
+                "telefono=" + usuario.getPhone(), //where
+                null,null,null,null,null);
+
+        if (c.moveToNext()){
+            Log.d(TAG, "El contacto existe, nombre: "+ c.getString(0) + " tlf: " + c.getString(1));
+            existe = true;
+        }
+        return existe;
+    }
 
     public ArrayList<Usuario> obtenerContactos(){
         String [] columnasABuscar = {"nombre","telefono","latitud", "longitud"};

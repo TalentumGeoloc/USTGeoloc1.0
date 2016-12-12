@@ -86,9 +86,11 @@ public class ContactosAgenda {
             String numeroSinParentisis = numero.replaceAll("\\(", "").replaceAll("\\)","");
             String numeroSinGuiones = numeroSinParentisis.replaceAll("\\-", "");
             String numeroSinEspacios = numeroSinGuiones.replaceAll(" ", "");
-            Log.d("ContactosAgenda","cargarNumeros -> Numero parseado " + numeroSinEspacios );
+            String numeroSinAnte = numeroSinEspacios.replaceAll("\\+34", "");
 
-            contactos.add(numeroSinEspacios);
+            Log.d("ContactosAgenda","cargarNumeros -> Numero parseado " + numeroSinAnte );
+
+            contactos.add(numeroSinAnte);
 
         }
 

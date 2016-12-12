@@ -388,8 +388,7 @@ public class GestorServer {
     public void comprobarMatches(){
         ContactosAgenda contactosAgenda = new ContactosAgenda(activity);
         ArrayList<String> contactos = contactosAgenda.obtenerNumeros();
-        GestorServer gs = new GestorServer(activity);
-        gs.obtenerMatches(contactos);
+        obtenerMatches(contactos);
     }
 
 }

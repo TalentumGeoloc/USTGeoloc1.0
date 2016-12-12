@@ -65,12 +65,20 @@
              You can define the keys for the debug and release targets in src/debug/ and src/release/.
         -->
 
-        <receiver android:name=".modelo.broadcasts.AlertReceiver">
+        <receiver android:name=".modelo.broadcasts.MyOnBootCompletedReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED">
                 </action>
             </intent-filter>
         </receiver>
+        <receiver android:name=".modelo.broadcasts.AlertReceiver">
+        </receiver>
+        <service android:name=".modelo.broadcasts.SendCoordinatesService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.RECEIVE"></action>
+            </intent-filter>
+        </service>
 
     </application>
 

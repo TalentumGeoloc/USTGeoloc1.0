@@ -258,6 +258,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                 marker.setTag(usuario);
             }
         }
+        daoContactos.cerrar();
     }
 
 

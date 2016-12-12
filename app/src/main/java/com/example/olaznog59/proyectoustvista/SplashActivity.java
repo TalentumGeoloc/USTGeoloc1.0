@@ -18,6 +18,7 @@ import android.support.v4.content.ContextCompat;
 import android.util.Log;
 
 import com.example.olaznog59.proyectoustvista.modelo.broadcasts.AlertReceiver;
+import com.example.olaznog59.proyectoustvista.modelo.broadcasts.SendCoordinatesService;
 import com.example.olaznog59.proyectoustvista.modelo.negocio.PermissionUtils;
 import com.example.olaznog59.proyectoustvista.modelo.negocio.serviciosrest.GestorServer;
 import com.example.olaznog59.proyectoustvista.modelo.negocio.singletons.Clave;
@@ -48,11 +49,7 @@ public class SplashActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
-
-
-
-   }
+    }
 
     @Override
     protected void onResume() {
@@ -61,34 +58,6 @@ public class SplashActivity extends Activity {
         SharedPreferences sp = getSharedPreferences(NOMBRE_PREFERENCIAS, Context.MODE_PRIVATE);
         phone = sp.getString("phone", "");
         key = sp.getString("key", "");
-
-        /*
-        //Solicitamos las coordenadas del usuario
-        Location loc;
-        double latitud = 0;
-        double longitud = 0;
-        LocationManager locManager = (LocationManager) getSystemService(LOCATION_SERVICE);
-
-
-        if (ActivityCompat.checkSelfPermission(this,
-                android.Manifest.permission.ACCESS_FINE_LOCATION)
-                == PackageManager.PERMISSION_GRANTED){
-            loc = locManager.getLastKnownLocation(LocationManager.PASSIVE_PROVIDER);
-            if (loc != null){
-                latitud = loc.getLatitude();
-                longitud = loc.getLongitude();
-            }
-        }
-
-
-        //cada vez que iniciemos la aplicación mandamos las coordenadas
-        //siempre y cuando ya estemos registrados en la aplicación
-        GestorServer gs = new GestorServer(this);
-        Clave clave = Clave.getInstance();
-        if (clave.getPhone() != null && latitud != 0 && longitud != 0){
-            gs.enviarCoordenadas(latitud, longitud);
-        } */
-
 
         Intent alertIntent = new Intent(this, AlertReceiver.class);
         PendingIntent pendingIntent = PendingIntent.getBroadcast(this,
