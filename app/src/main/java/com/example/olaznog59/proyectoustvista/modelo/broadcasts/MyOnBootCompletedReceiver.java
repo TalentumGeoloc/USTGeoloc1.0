@@ -10,7 +10,7 @@ import android.util.Log;
 
 public class MyOnBootCompletedReceiver extends BroadcastReceiver {
 
-    public static final String TAG = "MyOnBootCompletedReceiver";
+    public static final String TAG = "MyOnBootCompleted";
 
     public MyOnBootCompletedReceiver() {
     }
@@ -24,8 +24,8 @@ public class MyOnBootCompletedReceiver extends BroadcastReceiver {
             //Cuando el dispositivo se reinicie, debemos programar otra vez la alarma para que
             ////se envien las coordenadas cada meida hora, sin necesidad de acceder a la aplicación
 
-            Intent alertIntent = new Intent(context, SendCoordinatesService.class);
-            PendingIntent pendingIntent = PendingIntent.getService(context,
+            Intent alertIntent = new Intent(context, AlertReceiver.class);
+            PendingIntent pendingIntent = PendingIntent.getBroadcast(context,
                     0,
                     alertIntent,
                     0);

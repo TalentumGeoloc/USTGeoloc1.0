@@ -148,12 +148,12 @@ public class SendCoordinatesService extends IntentService {
 
         PendingIntent notifIntent = PendingIntent.getActivity(context, 0,
                 new Intent(context,SplashActivity.class), 0);
-        Log.d("AlarmReceiver","Ha entrado en el método 'crearNotif'");
+        Log.d(TAG,"Ha entrado en el método 'crearNotif'");
         NotificationCompat.Builder mBuilder = (NotificationCompat.Builder) new NotificationCompat.Builder(context)
-                .setContentTitle("Se han mandado las coordenadas del tlf: "+clave.getPhone())
+                .setContentTitle("Enviadas coordenadas ")
                 .setTicker("Alert")
-                .setContentText("Enviadas coordenadas: " + latitud + " " + longitud)
-                .setSmallIcon(R.drawable.plainicon);
+                .setContentText(latitud + " - " + longitud)
+                .setSmallIcon(R.drawable.markericon);
 
         mBuilder.setContentIntent(notifIntent);
 
